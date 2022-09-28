@@ -23,6 +23,7 @@ def spot_data(spot_id, spot_name, iteration=1):
     iteration+=1
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    #TODO change path to relative
     browser = webdriver.Chrome(service=Service('C:/Users/rmartinezg/Documents/chromedriver.exe')
                                , options=options)
     #browser.implicitly_wait(10)
@@ -129,7 +130,6 @@ spots = [{'spot_id':'116713', 'name': 'Punta Negra'},
          {'spot_id':'405894', 'name': 'La Olla'},
          {'spot_id':'34544', 'name': 'Santa Lucia del Este'},
          {'spot_id':'422330', 'name': 'Cuchilla Alta'}]
-
 
 all_spots = pd.DataFrame()
       
